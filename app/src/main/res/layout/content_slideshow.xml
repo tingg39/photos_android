@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Slideshow"
+    tools:showIn="@layout/slideshow"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/bigImage"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fillViewport="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/prev_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Prev Pic"
+            android:onClick="prev"
+            android:padding="10dp"/>
+        <Button
+            android:id="@+id/next_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Next Pic"
+            android:onClick="next"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tagText"
+        android:fillViewport="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Person tags: "
+            android:padding="10dp"/>
+        <TextView
+            android:id="@+id/person_tags"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/personTag"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add tag"
+        android:onClick="addPerson"
+        android:id="@+id/addperson"
+        android:layout_gravity="right"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Location tags: "
+            android:padding="10dp"/>
+        <TextView
+            android:id="@+id/location_tags"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationTag"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add tag"
+        android:onClick="addLocation"
+        android:id="@+id/addlocation"
+        android:layout_gravity="right"/>
+
+</LinearLayout>
